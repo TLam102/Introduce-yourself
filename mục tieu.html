@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Mục tiêu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+	<style>
+html {
+    overflow-y: scroll;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #FFF6ED;
+    margin:0;
+    padding:40px;
+}
+
+/* Khung mục tiêu */
+.goal-box{
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    padding:20px;
+    max-width:900px;
+    margin:auto;
+}
+
+/* Tiêu đề */
+.goal-header{
+    cursor:pointer;
+    font-size:20px;
+    font-weight:500;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.goal-header span{
+    color:red;
+    font-weight:bold;
+}
+
+/* Nội dung ẩn */
+.goal-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    margin-top:15px;
+}
+
+.goal-content p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+.arrow{
+    transition:transform 0.3s ease;
+}
+
+/* Khi mở */
+.goal-box.active .goal-content{
+    max-height:400px;
+}
+
+.goal-box.active .arrow{
+    transform:rotate(180deg);
+}
+</style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.jpg" alt="logo">
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Giới thiệu</a></li>
+            <li><a href="muc tieu.html">Mục tiêu</a></li>
+            <li><a href="#">Hoạt động</a></li>
+            <li><a href="lien he.html">Liên hệ</a></li>
+        </ul>
+    </nav>
+	<!--<div class="goal-box">
+    <div class="goal-header" onclick="toggleGoal()">
+        <div>
+            <span>01</span> - Tôi sẽ tối ưu <b>01 website CV</b> 
+            để đạt điểm hiệu suất <b>trên 80/100</b>
+        </div>
+        <div class="arrow">▲</div>
+    </div>
+
+    <div class="goal-content">
+        <p><b>S:</b> Tối ưu hiệu suất website CV</p>
+        <p><b>M:</b> Điểm hiệu suất ≥ 80</p>
+        <p><b>A:</b> Tối ưu hình ảnh, CSS, JS</p>
+        <p><b>R:</b> Quan trọng cho công việc lập trình web chuyên nghiệp</p>
+        <p><b>T:</b> 01/04/2026 - 31/05/2026</p>
+    </div>
+</div>-->
+    <footer>
+        <p>Website được thực hiện bởi Nguyễn Thị Trúc Lam © 2026</p>
+    </footer>
+
+</body>
+</html>

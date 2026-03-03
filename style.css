@@ -1,124 +1,159 @@
-
+/* Reset */
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Luôn có thanh cuộn dọc */
+html {
+    overflow-y: scroll;
 }
 
 body {
-	background-color: #FFF6ED;
-	min-height: 100vh;
-	font-family: Arial, Helvetica, sans-serif;
-	overflow-y: auto;
+    background-color: #FFF6ED;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    padding-top: 90px;      /* tránh bị navbar che */
+    padding-bottom: 70px;   /* tránh bị footer che */
 }
 
-.tenvaanh {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 40px;
-	padding: 40px 20px;
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ================= GIỚI THIỆU ================= */
+
+.gioithieu {
+    background-color: #FADADD;
+    border: 1px solid #ccc;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 600px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.tenvatt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px 60px;
+}
+
+.ten {
+    margin: 10px;
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #FADADD;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ================= ẢNH ================= */
 
 .avatar {
-	width: 350px;
-	height: 300px;
-	object-fit: cover;
-	border-radius: 10px;
-	max-width: 100%;
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    max-width: 100%;
 }
-.ten {
-	margin: 20px;
-	display: inline-block;
-	padding: 20px 30px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	background-color: #FADADD;
-	font-size: 16px;
-	line-height: 1.6;
-	white-space: nowrap;
+
+img {
+    max-width: 100%;
+    height: auto;
 }
+
+/* ================= CONTACT ================= */
+
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 100px 20px;
+    flex-wrap: wrap;
+}
+
+.map {
+    flex: 0 0 400px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* ================= TABLE ================= */
+
 .tkb {
-	border-collapse: collapse;
-	width: 70%;
-	margin: 20px auto;
-	font-size: 16px;
+    border-collapse: collapse;
+    width: 70%;
+    margin: 20px auto;
+    font-size: 16px;
 }
 
 th {
-	background-color: #C4A484;
+    background-color: #C4A484;
 }
 
 td, th {
-	border: 1px solid #ccc;
-	padding: 10px 15px;
-	text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    text-align: center;
 }
 
 tr:hover {
-	background-color: #D2B48C;
+    background-color: #D2B48C;
 }
 
 caption {
-	text-transform: uppercase;
-	margin-bottom: 10px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
+
+/* ================= FOOTER ================= */
+
 footer {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	background-color: #FADADD;
-	padding: 10px 0;
-	font-size: 14px;
-}
-img {
-	max-width: 100%;
-	height: auto;
-}
-/*TƯƠNG THÍCH TABLET*/
-@media (max-width: 1024px) {
-
-	.avatar {
-		width: 300px;
-		height: auto;
-	}
-
-	.tkb {
-		width: 85%;
-	}
-
-	.ten {
-		margin: 20px;
-		white-space: normal;
-	}
-}
-
-/*  TƯƠNG THÍCH MOBILE */
-@media (max-width: 768px) {
-
-	.tenvaanh {
-		flex-direction: column;
-		gap: 20px;
-	}
-
-	.avatar {
-		width: 90%;
-		height: auto;
-	}
-
-	.ten {
-		margin: 10px;
-		font-size: 14px;
-		white-space: normal;
-	}
-
-	.tkb {
-		width: 95%;
-		font-size: 14px;
-	}
-
-	footer {
-		position: static;
-	}
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #FADADD;
+    padding: 10px 0;
+    font-size: 14px;
 }
